@@ -1,2 +1,2 @@
-tiennguyen.netlify.com
-CV 'Street Figter' styles.
+## tiennguyen.netlify.com
+Street Figter style.
