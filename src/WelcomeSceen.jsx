@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 import './welcomeScreen.css';
 
-class App extends Component {
-  goToItem = () => {
+class WelcomeScreen extends Component {
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleAnyKey, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleAnyKey, false);
+  }
+
+  handleAnyKey = (event) => {
     const { history } = this.props;
-    history.push({
-      pathname: '/item',
-    });
+    if (event.keyCode === 13) {
+      history.push({
+        pathname: '/item',
+      });
+    }
   }
 
   render() {
@@ -26,16 +36,8 @@ class App extends Component {
           </div>
 
           <div className="buttons">
-            <div role="button"
-              tabIndex="-1"
-              className="text purple-with-blue"
-              onClick={this.goToItem}
-            >
-            Push start button
-            </div>
-            <span className="text grey-with-red">One Player</span>
-            <span className="text grey-with-red">or</span>
-            <span className="text grey-with-red">Player 1 vs Player 2</span>
+            <a className="text purple-with-blue">Nguyen Minh Tien</a>
+            <span className="text grey-with-red">Press ENTER to continue...</span>
           </div>
 
           <div className="bottom">
@@ -55,4 +57,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default WelcomeScreen;
