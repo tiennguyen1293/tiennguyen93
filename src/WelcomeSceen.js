@@ -30,7 +30,8 @@ class App extends Component {
             <span className="yellow-with-darkyellow"> TIEN</span>
           </a>
           <div className="credit grey-with-red">
-            INSERT COIN{' '}
+            INSERT COIN
+            {' '}
             <span className="yellow-with-darkyellow">0</span>
           </div>
         </div>

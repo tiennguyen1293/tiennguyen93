@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import WelcomeSceen from "./WelcomeSceen";
+import WelcomeSceen from './WelcomeSceen';
 import './App.css';
 
 class App extends Component {
